@@ -1,0 +1,24 @@
+---
+import { siteConfig } from '../data/site';
+---
+
+<footer class="mt-12 border-t border-stone-200 bg-stone-50">
+  <div class="mx-auto max-w-4xl px-4 py-8 text-sm text-stone-600">
+    <p class="font-bold text-stone-800">{siteConfig.name}</p>
+    <p class="mt-1">
+      {siteConfig.postalCode} {siteConfig.address}
+    </p>
+    <p class="mt-1">
+      TEL:{' '}
+      <a href={siteConfig.telHref} class="underline">
+        {siteConfig.tel}
+      </a>
+    </p>
+    <p class="mt-1">
+      営業時間：{siteConfig.businessHours}（{siteConfig.closedDay}）
+    </p>
+    <p class="mt-4">
+      &copy; {new Date().getFullYear()} {siteConfig.name}
+    </p>
+  </div>
+</footer>

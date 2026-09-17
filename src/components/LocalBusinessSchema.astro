@@ -1,0 +1,21 @@
+---
+import { siteConfig } from '../data/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: siteConfig.name,
+  image: new URL('/favicon.svg', Astro.site).toString(),
+  telephone: siteConfig.tel,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.address,
+    postalCode: siteConfig.postalCode.replace('〒', ''),
+    addressCountry: 'JP',
+  },
+  openingHours: 'Tu-Su 10:00-18:00',
+  url: Astro.site?.toString(),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>

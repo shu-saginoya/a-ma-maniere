@@ -71,20 +71,20 @@ SPEC.mdのページ構成・技術仕様に沿って実装する。
 
 ### 3.1 共通部分
 
-- [ ] 全ページ共通レイアウト（ヘッダー・フッター・ナビゲーション）
-- [ ] Tailwindによる基本デザイントークン（色・フォント・余白）の設定
-- [ ] 電話・LINE・お問い合わせへの共通導線コンポーネント
-- [ ] SEO共通設定（タイトル・meta description・OGP・canonical・favicon）
-- [ ] `robots.txt` / `sitemap.xml` の生成設定（`@astrojs/sitemap` 等）
-- [ ] LocalBusiness構造化データ（JSON-LD）の共通コンポーネント化
+- [x] 全ページ共通レイアウト（ヘッダー・フッター・ナビゲーション）
+- [x] Tailwindによる基本デザイントークン（色・フォント・余白）の設定
+- [x] 電話・LINE・お問い合わせへの共通導線コンポーネント
+- [x] SEO共通設定（タイトル・meta description・OGP・canonical・favicon）
+- [x] `robots.txt` / `sitemap.xml` の生成設定（`@astrojs/sitemap` 等）
+- [x] LocalBusiness構造化データ（JSON-LD）の共通コンポーネント化
 
 ### 3.2 ページ実装
 
-- [ ] `/`（トップページ）: 店舗紹介・サービス概要・営業時間・SNS導線・問い合わせ導線
-- [ ] `/about/`: 店舗紹介・店主メッセージ
-- [ ] `/price/`: 料金表
-- [ ] `/access/`: 店舗情報・アクセス・Googleマップ
-- [ ] `/contact/`: 電話・Googleフォーム・LINEの導線を明確に区別して掲載
+- [x] `/`（トップページ）: 店舗紹介・サービス概要・営業時間・SNS導線・問い合わせ導線
+- [x] `/about/`: 店舗紹介・店主メッセージ（現行サイトの内容を転記）
+- [x] `/price/`: 料金表（現行サイトの内容を転記）
+- [x] `/access/`: 店舗情報・アクセス・Googleマップ（埋め込み。TODO: 正式な店舗ピン座標に差し替え）
+- [x] `/contact/`: 電話・Googleフォーム・LINEの導線を明確に区別して掲載（TODO: GoogleフォームURL・Instagram URLは仮設定。確定次第 `src/data/site.ts` を差し替える）
 
 ### 3.3 レスポンシブ・アクセシビリティ確認
 

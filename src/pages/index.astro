@@ -1,13 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/site';
 ---
 
-<Layout
-  title="A ma maniere（アマニエール）｜洋服のお直し・お仕立て"
-  description="A ma maniereは洋服のお直し・お仕立てを行う地域の洋裁店です。ファスナー交換、ウエスト調整、破れ直しなど承ります。"
->
+<Layout title={`${siteConfig.name}｜${siteConfig.catchCopy}`} description={siteConfig.description}>
   <main class="mx-auto max-w-3xl px-4 py-12">
-    <h1 class="text-2xl font-bold">A ma maniere</h1>
-    <p class="mt-4">サイトは準備中です。</p>
+    <h1 class="text-2xl font-bold">{siteConfig.name}</h1>
+    <p class="mt-2 text-stone-600">{siteConfig.catchCopy}</p>
+
+    <p class="mt-6 leading-relaxed">
+      長年の経験をもとにさまざまなお洋服をお直ししてまいりました。縫えることならなんでもやりますので、お気軽にご相談ください。
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-4 text-sm">
+      <a href="/about/" class="underline">
+        A ma maniereについて
+      </a>
+      <a href="/price/" class="underline">
+        お直し・料金
+      </a>
+      <a href="/access/" class="underline">
+        店舗情報・アクセス
+      </a>
+      <a href="/contact/" class="underline">
+        お問い合わせ
+      </a>
+    </div>
+
+    <section class="mt-10 rounded border border-stone-200 p-4">
+      <h2 class="font-bold">店舗情報</h2>
+      <p class="mt-2 text-sm">
+        {siteConfig.postalCode} {siteConfig.address}
+      </p>
+      <p class="mt-1 text-sm">
+        TEL:{' '}
+        <a href={siteConfig.telHref} class="underline">
+          {siteConfig.tel}
+        </a>
+      </p>
+      <p class="mt-1 text-sm">
+        営業時間：{siteConfig.businessHours}（{siteConfig.closedDay}）
+      </p>
+    </section>
+
+    <div class="mt-6 flex flex-wrap gap-4 text-sm">
+      <a href={siteConfig.lineUrl} target="_blank" rel="noopener noreferrer" class="underline">
+        LINE
+      </a>
+      <a href={siteConfig.instagramUrl} target="_blank" rel="noopener noreferrer" class="underline">
+        Instagram
+      </a>
+      <a href={siteConfig.facebookUrl} target="_blank" rel="noopener noreferrer" class="underline">
+        Facebook
+      </a>
+    </div>
   </main>
 </Layout>

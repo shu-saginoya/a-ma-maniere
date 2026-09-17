@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { siteConfig } from '../../data/site';
+---
+
+<Layout
+  title={`お問い合わせ｜${siteConfig.name}`}
+  description="A ma maniereへのお問い合わせは、お電話・お問い合わせフォーム・LINEから承ります。"
+>
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-2xl font-bold">お問い合わせ</h1>
+    <p class="mt-4">
+      お問い合わせは、お電話・お問い合わせフォーム・LINEのいずれかからお願いいたします。
+    </p>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <section class="rounded border border-stone-200 p-4">
+        <h2 class="font-bold">お電話</h2>
+        <p class="mt-2 text-sm text-stone-600">
+          営業時間：{siteConfig.businessHours}（{siteConfig.closedDay}）
+        </p>
+        <a href={siteConfig.telHref} class="mt-3 inline-block font-bold underline">
+          {siteConfig.tel}
+        </a>
+      </section>
+
+      <section class="rounded border border-stone-200 p-4">
+        <h2 class="font-bold">お問い合わせフォーム</h2>
+        <p class="mt-2 text-sm text-stone-600">Googleフォームからお問い合わせいただけます。</p>
+        <a
+          href={siteConfig.googleFormUrl}
+          class="mt-3 inline-block font-bold underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          フォームを開く
+        </a>
+      </section>
+
+      <section class="rounded border border-stone-200 p-4">
+        <h2 class="font-bold">LINE</h2>
+        <p class="mt-2 text-sm text-stone-600">公式LINEからもお問い合わせいただけます。</p>
+        <a
+          href={siteConfig.lineUrl}
+          class="mt-3 inline-block font-bold underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LINEで問い合わせる
+        </a>
+      </section>
+    </div>
+  </main>
+</Layout>

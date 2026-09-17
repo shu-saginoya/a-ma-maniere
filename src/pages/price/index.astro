@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { siteConfig } from '../../data/site';
+
+const repairPrices = [
+  { item: 'パンツの丈つめ', price: '￥800～' },
+  { item: 'スカートの丈つめ', price: '￥1,800～' },
+  { item: 'ワンピースの丈つめ', price: '￥2,800～' },
+  { item: 'ファスナー交換', price: '￥2,300～' },
+  { item: 'カーテン丈つめ', price: '￥1,100～' },
+  { item: 'ウエストつめ（紳士）', price: '￥1,800～' },
+  { item: 'ウエストつめ（婦人）', price: '￥3,000～' },
+  { item: 'ジーンズ等の破れ直し', price: '￥880～' },
+];
+
+const orderMadePrices = [{ item: 'スカート', price: '￥15,000～' }];
+---
+
+<Layout
+  title={`お直し・料金｜${siteConfig.name}`}
+  description="A ma maniereのお直し・お仕立ての料金の目安をご紹介します。"
+>
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-2xl font-bold">お直し・料金</h1>
+    <p class="mt-4">
+      生地・デザインなどにより料金は異なりますので、まずはご相談ください。以下に簡単な作業の目安を表示いたします。
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">お直し</h2>
+    <table class="mt-4 w-full border-collapse text-left">
+      <tbody>
+        {repairPrices.map((row) => (
+          <tr class="border-b border-stone-200">
+            <th scope="row" class="py-2 pr-4 font-normal">
+              {row.item}
+            </th>
+            <td class="py-2">{row.price}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2 class="mt-8 text-xl font-bold">お仕立て</h2>
+    <table class="mt-4 w-full border-collapse text-left">
+      <tbody>
+        {orderMadePrices.map((row) => (
+          <tr class="border-b border-stone-200">
+            <th scope="row" class="py-2 pr-4 font-normal">
+              {row.item}
+            </th>
+            <td class="py-2">{row.price}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <p class="mt-8 text-sm text-stone-600">
+      上記以外のお直し・お仕立てについても、お気軽にお問い合わせください。
+    </p>
+  </main>
+</Layout>
