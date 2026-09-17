@@ -1,43 +1,37 @@
-# Astro Starter Kit: Minimal
+# A ma maniere Webサイト
 
-```sh
-npm create astro@latest -- --template minimal
-```
+洋服のお直し・お仕立てを行う「A ma maniere」の公式サイトです。Astro + TypeScript + Tailwind CSS による静的サイトとして構築し、Cloudflare Pages で配信します。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+詳細な仕様は [docs/SPEC.md](./docs/SPEC.md)、作業計画は [docs/PLAN.md](./docs/PLAN.md) を参照してください。
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## プロジェクト構成
 
 ```text
 /
-├── public/
+├── public/            静的アセット（favicon等）
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── layouts/       共通レイアウト
+│   ├── pages/         ルーティング対象のページ
+│   └── styles/        グローバルスタイル（Tailwind）
+├── docs/              仕様書・作業計画書
+└── astro.config.mjs
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 開発コマンド
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| コマンド               | 内容                               |
+| ---------------------- | ---------------------------------- |
+| `npm install`          | 依存パッケージのインストール       |
+| `npm run dev`          | ローカル開発サーバーの起動         |
+| `npm run build`        | 本番用ビルド（`./dist/`に出力）    |
+| `npm run preview`      | ビルド結果のローカルプレビュー     |
+| `npm run format`       | Prettierによるコード整形           |
+| `npm run format:check` | フォーマット崩れのチェック（CI用） |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## デプロイ
 
-## 🧞 Commands
+GitHubリポジトリへのpushをトリガーに、Cloudflare Pagesが自動ビルド・デプロイを行う構成です。
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- ビルドコマンド: `npm run build`
+- 出力ディレクトリ: `dist`
+- 本番ドメイン: `a-ma-maniere.jp`（DNS移行完了後に接続）
