@@ -10,13 +10,14 @@ export const siteConfig = {
   telHref: 'tel:0298673871',
   businessHours: '10時～18時',
   closedDay: '月曜定休',
+  latitude: 36.1822492809315,
+  longitude: 140.06461657776634,
   // TODO: 正式なGoogleフォームのURLが決まり次第、差し替える
   googleFormUrl: 'https://forms.gle/PLACEHOLDER',
   // TODO: 正式なInstagramアカウントが決まり次第、差し替える
   instagramUrl: 'https://www.instagram.com/',
   facebookUrl: 'https://www.facebook.com/AmamaniereT/',
   lineUrl: 'https://lin.ee/9FP7AwS',
-  // Googleマップの埋め込み用src（TODO: 正式な店舗ピンの座標で差し替える）
   googleMapEmbedSrc:
-    'https://www.google.com/maps?q=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E3%81%A4%E3%81%8F%E3%81%B0%E5%B8%82%E7%94%B0%E4%B8%AD1180-8&output=embed',
+    'https://www.google.com/maps?q=36.1822492809315,140.06461657776634&z=17&output=embed',
 } as const;
