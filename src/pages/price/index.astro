@@ -30,32 +30,24 @@ const orderMadePrices = [
     </p>
 
     <h2 class="mt-8 text-xl font-bold">お直し</h2>
-    <table class="mt-4 w-full border-collapse text-left">
-      <tbody>
-        {repairPrices.map((row) => (
-          <tr class="border-b border-stone-200">
-            <th scope="row" class="py-2 pr-4 font-normal">
-              {row.item}
-            </th>
-            <td class="py-2">{row.price}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <ul class="mt-4 w-full">
+      {repairPrices.map((row) => (
+        <li class="border-b border-stone-200 py-2 grid grid-cols-3">
+          <span class="col-span-2">{row.item}</span>
+          <span>{row.price}</span>
+        </li>
+      ))}
+    </ul>
 
     <h2 class="mt-8 text-xl font-bold">お仕立て</h2>
-    <table class="mt-4 w-full border-collapse text-left">
-      <tbody>
-        {orderMadePrices.map((row) => (
-          <tr class="border-b border-stone-200">
-            <th scope="row" class="py-2 pr-4 font-normal">
-              {row.item}
-            </th>
-            <td class="py-2">{row.price}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <ul class="mt-4 w-full">
+      {orderMadePrices.map((row) => (
+        <li class="border-b border-stone-200 py-2 grid grid-cols-3">
+          <span class="col-span-2">{row.item}</span>
+          <span>{row.price}</span>
+        </li>
+      ))}
+    </ul>
 
     <p class="mt-8 text-sm text-stone-600">
       上記以外のお直し・お仕立てについても、お気軽にお問い合わせください。
