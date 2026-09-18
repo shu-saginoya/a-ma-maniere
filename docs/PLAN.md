@@ -46,21 +46,21 @@
 
 ## フェーズ1: 開発環境構築
 
-- [x] Node.js LTSのインストール確認（バージョン固定は `.nvmrc` 等で管理）
-- [x] `npm create astro@latest` でAstroプロジェクトを初期化（TypeScript使用）
+- [x] Node.js LTSのインストール確認（`package.json` のVolta設定で `22.12.0` に固定）
+- [x] `pnpm dlx create-astro` でAstroプロジェクトを初期化（TypeScript使用）
 - [x] Tailwind CSSの導入（`@tailwindcss/vite` インテグレーション。`@astrojs/tailwind` はTailwind v4では非推奨のため公式Viteプラグインを採用）
 - [x] ESLint / Prettier 等の最低限のコード整形ルールを設定
 - [x] `.gitignore` の整備（`node_modules`、`dist`、`.env` 等）
-- [x] ローカル開発サーバーの起動確認（`npm run dev`）
+- [x] ローカル開発サーバーの起動確認（`pnpm dev`）
 
 ---
 
 ## フェーズ2: GitHubリポジトリ設定
 
 - [x] GitHubリポジトリの作成（Private推奨、後で公開可否を判断）※既存のリポジトリ・リモート接続を確認済み
-- [ ] ローカルリポジトリとリモートの接続、初回コミット・push（ローカルコミットまで完了。pushはユーザー確認後に実施）
-- [ ] ブランチ運用の決定(例: `main` を本番反映ブランチとし、作業は作業ブランチ→PRでmainにマージ）
-- [ ] mainブランチの保護設定（force push禁止など、必要に応じて）
+- [x] ローカルリポジトリとリモートの接続、初回コミット・push（完了）
+- [x] ブランチ運用の決定（`main` を本番反映ブランチとし、作業は `feature/xxxxx` → PRでmainにマージ）
+- [x] mainブランチの保護設定（直接push禁止を設定済み）
 - [x] READMEに開発コマンド・デプロイ方法を記載
 
 ---
