@@ -19,19 +19,19 @@
 
 ## 開発コマンド
 
-| コマンド               | 内容                               |
-| ---------------------- | ---------------------------------- |
-| `npm install`          | 依存パッケージのインストール       |
-| `npm run dev`          | ローカル開発サーバーの起動         |
-| `npm run build`        | 本番用ビルド（`./dist/`に出力）    |
-| `npm run preview`      | ビルド結果のローカルプレビュー     |
-| `npm run format`       | Prettierによるコード整形           |
-| `npm run format:check` | フォーマット崩れのチェック（CI用） |
+| コマンド            | 内容                               |
+| ------------------- | ---------------------------------- |
+| `pnpm install`      | 依存パッケージのインストール       |
+| `pnpm dev`          | ローカル開発サーバーの起動         |
+| `pnpm build`        | 本番用ビルド（`./dist/`に出力）    |
+| `pnpm preview`      | ビルド結果のローカルプレビュー     |
+| `pnpm format`       | Prettierによるコード整形           |
+| `pnpm format:check` | フォーマット崩れのチェック（CI用） |
 
 ## デプロイ
 
 GitHubリポジトリへのpushをトリガーに、Cloudflare Pagesが自動ビルド・デプロイを行う構成です。
 
-- ビルドコマンド: `npm run build`
+- ビルドコマンド: `pnpm build`
 - 出力ディレクトリ: `dist`
 - 本番ドメイン: `a-ma-maniere.jp`（DNS移行完了後に接続）
