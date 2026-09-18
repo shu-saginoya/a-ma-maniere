@@ -14,8 +14,6 @@ export const siteConfig = {
   longitude: 140.06461657776634,
   // TODO: 正式なGoogleフォームのURLが決まり次第、差し替える
   googleFormUrl: 'https://forms.gle/PLACEHOLDER',
-  // TODO: 正式なInstagramアカウントが決まり次第、差し替える
-  instagramUrl: 'https://www.instagram.com/',
   facebookUrl: 'https://www.facebook.com/AmamaniereT/',
   lineUrl: 'https://lin.ee/9FP7AwS',
   googleMapEmbedSrc:
