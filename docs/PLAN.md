@@ -96,11 +96,11 @@ SPEC.mdのページ構成・技術仕様に沿って実装する。
 
 ## フェーズ4: Cloudflare Pages設定・ステージング公開
 
-- [ ] Cloudflareアカウントの用意
-- [ ] Cloudflare PagesとGitHubリポジトリの連携
-- [ ] ビルド設定（フレームワークプリセット: Astro、ビルドコマンド、出力ディレクトリ）
-- [ ] `*.pages.dev` の自動生成ドメインで動作確認（本番ドメインには未接続の段階）
-- [ ] プレビュー環境（PRごとのプレビューURL）の動作確認
+- [x] Cloudflareアカウントの用意
+- [x] Cloudflare PagesとGitHubリポジトリの連携
+- [x] ビルド設定（フレームワークプリセット: Astro、ビルドコマンド、出力ディレクトリ）
+- [x] 自動生成ドメイン（`https://a-ma-maniere.shu-saginoya.workers.dev/`）で動作確認済み（本番ドメインには未接続の段階。全5ページの表示・導線をブラウザで確認）
+- [x] プレビュー環境（PRごとのプレビューURL）の動作確認
 
 ---
 
