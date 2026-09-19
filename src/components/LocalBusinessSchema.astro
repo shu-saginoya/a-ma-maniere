@@ -5,7 +5,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: siteConfig.name,
-  image: new URL('/favicon.svg', Astro.site).toString(),
+  image: new URL('/images/shop_logo.png', Astro.site).toString(),
   telephone: siteConfig.tel,
   address: {
     '@type': 'PostalAddress',
