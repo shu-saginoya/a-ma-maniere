@@ -15,10 +15,11 @@ const currentPath = Astro.url.pathname;
 <header class="border-b border-stone-200 bg-white">
   <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-4 py-4">
     <a href="/" class="flex items-center gap-2 text-lg font-bold text-stone-800">
-      <img src="/images/shop_logo.png" alt={siteConfig.name} class="h-10 w-auto" />
-      <span class="sr-only">
-        {siteConfig.name}（{siteConfig.nameKana}）
-      </span>
+      <img
+        src="/images/shop_logo.png"
+        alt={`${siteConfig.name}（${siteConfig.nameKana}）`}
+        class="h-10 w-auto"
+      />
     </a>
     <nav aria-label="メインナビゲーション">
       <ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm">

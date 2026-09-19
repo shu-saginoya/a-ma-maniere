@@ -6,7 +6,14 @@ import { siteConfig } from '../data/site';
 <Layout title={`${siteConfig.name}｜${siteConfig.catchCopy}`} description={siteConfig.description}>
   <main class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-2xl font-bold">{siteConfig.name}</h1>
+
     <p class="mt-2 text-stone-600">{siteConfig.catchCopy}</p>
+
+    <img
+      src="/images/bg00.jpg"
+      alt="店舗の作業場にあるプロフェッショナルミシン"
+      class="mt-6 aspect-video w-full rounded object-cover"
+    />
 
     <p class="mt-6 leading-relaxed">
       長年の経験をもとにさまざまなお洋服をお直ししてまいりました。縫えることならなんでもやりますので、お気軽にご相談ください。
@@ -27,20 +34,29 @@ import { siteConfig } from '../data/site';
       </a>
     </div>
 
-    <section class="mt-10 rounded border border-stone-200 p-4">
-      <h2 class="font-bold">店舗情報</h2>
-      <p class="mt-2 text-sm">
-        {siteConfig.postalCode} {siteConfig.address}
-      </p>
-      <p class="mt-1 text-sm">
-        TEL:{' '}
-        <a href={siteConfig.telHref} class="underline">
-          {siteConfig.tel}
-        </a>
-      </p>
-      <p class="mt-1 text-sm">
-        営業時間：{siteConfig.businessHours}（{siteConfig.closedDay}）
-      </p>
+    <section class="mt-10 rounded border border-stone-200 p-4 flex flex-col md:flex-row md:justify-between items-center gap-4">
+      <div>
+        <h2 class="font-bold">店舗情報</h2>
+        <p class="mt-2 text-sm">
+          {siteConfig.postalCode} {siteConfig.address}
+        </p>
+        <p class="mt-1 text-sm">
+          TEL:{' '}
+          <a href={siteConfig.telHref} class="underline">
+            {siteConfig.tel}
+          </a>
+        </p>
+        <p class="mt-1 text-sm">
+          営業時間：{siteConfig.businessHours}（{siteConfig.closedDay}）
+        </p>
+      </div>
+      <img
+        src="/images/character_v2.png"
+        width="111"
+        height="101"
+        class="w-28 h-25"
+        alt="A ma maniereのイメージキャラクター"
+      />
     </section>
 
     <div class="mt-6 flex flex-wrap gap-4 text-sm">
