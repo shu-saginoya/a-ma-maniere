@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://a-ma-maniere.jp',
@@ -14,4 +16,5 @@ export default defineConfig({
   },
 
   integrations: [sitemap()],
+  adapter: cloudflare(),
 });
