@@ -106,10 +106,10 @@ SPEC.mdのページ構成・技術仕様に沿って実装する。
 
 ## フェーズ5: コンテンツレビュー・確認
 
-- [ ] ステージング環境をユーザーに共有し、内容確認を依頼
-- [ ] 店舗情報・料金・写真・問い合わせ導線の最終確認
-- [ ] 表示速度・モバイル表示の最終チェック
-- [ ] 誤字脱字・リンク切れの確認
+- [x] ステージング環境をユーザーに共有し、内容確認を依頼（`https://a-ma-maniere.pages.dev/`）
+- [x] 店舗情報・料金・写真・問い合わせ導線の最終確認（Googleフォームは準備中表示のまま公開する方針を確認）
+- [x] 表示速度・モバイル表示の最終チェック（375px幅で全ページに横スクロールがないこと、アクセスページのGoogleマップ表示を確認）
+- [x] 誤字脱字・リンク切れの確認（全5ページ、robots.txt、sitemap.xml、manifest、favicon関連アセットのHTTP 200を確認）
 
 ---
 
@@ -117,10 +117,10 @@ SPEC.mdのページ構成・技術仕様に沿って実装する。
 
 現行サイトを止めずに準備を進める工程。
 
-- [ ] 現行ドメインのDNSレコード（A/CNAME/MX/TXT等）を事前にすべて控える
+- [x] 現行ドメインのDNSレコード（A/CNAME/MX/TXT等）を事前にすべて控える（TTLはいずれも3600。`@` A: `210.224.185.159`、`www` CNAME: `a-ma-maniere.jp`、MX: `10 a-ma-maniere.jp`、TXT: `v=spf1 a:www2519.sakura.ne.jp mx ~all`、NS: `ns1.dns.ne.jp` / `ns2.dns.ne.jp`）
 - [x] メール利用がないことを確認（MXレコード等のメール移行は不要）
 - [ ] Cloudflareにドメインを追加し、ネームサーバー変更前に設定内容を検証（Cloudflare側でDNSレコードを事前設定）
-- [ ] 旧URLから新URLへの301リダイレクト方針を確定（例: `/introduction/` → `/about/`）
+- [x] 旧URLから新URLへの301リダイレクト方針を確定（`/introduction/` → `/about/`。Cloudflare Pages用の `public/_redirects` に設定）
 - [ ] SSL/TLS設定の確認（Cloudflare Universal SSL）
 - [ ] ドメイン管理事業者からCloudflare Registrarへの移管要否を判断（必須ではない。移管しない場合はネームサーバーのみCloudflareへ向ける）
 
