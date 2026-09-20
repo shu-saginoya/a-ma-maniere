@@ -117,10 +117,10 @@ SPEC.mdのページ構成・技術仕様に沿って実装する。
 
 現行サイトを止めずに準備を進める工程。
 
-- [ ] 現行ドメインのDNSレコード（A/CNAME/MX/TXT等）を事前にすべて控える
+- [x] 現行ドメインのDNSレコード（A/CNAME/MX/TXT等）を事前にすべて控える（TTLはいずれも3600。`@` A: `210.224.185.159`、`www` CNAME: `a-ma-maniere.jp`、MX: `10 a-ma-maniere.jp`、TXT: `v=spf1 a:www2519.sakura.ne.jp mx ~all`、NS: `ns1.dns.ne.jp` / `ns2.dns.ne.jp`）
 - [x] メール利用がないことを確認（MXレコード等のメール移行は不要）
 - [ ] Cloudflareにドメインを追加し、ネームサーバー変更前に設定内容を検証（Cloudflare側でDNSレコードを事前設定）
-- [ ] 旧URLから新URLへの301リダイレクト方針を確定（例: `/introduction/` → `/about/`）
+- [x] 旧URLから新URLへの301リダイレクト方針を確定（`/introduction/` → `/about/`。Cloudflare Pages用の `public/_redirects` に設定）
 - [ ] SSL/TLS設定の確認（Cloudflare Universal SSL）
 - [ ] ドメイン管理事業者からCloudflare Registrarへの移管要否を判断（必須ではない。移管しない場合はネームサーバーのみCloudflareへ向ける）
 
