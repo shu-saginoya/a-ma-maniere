@@ -17,5 +17,5 @@ export const siteConfig = {
   facebookUrl: 'https://www.facebook.com/AmamaniereT/',
   lineUrl: 'https://lin.ee/9FP7AwS',
   googleMapEmbedSrc:
-    'https://www.google.com/maps?q=36.1822492809315,140.06461657776634&z=17&output=embed',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18433.6608136545!2d140.06679188081324!3d36.180199166747464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60220632196c09c9%3A0x78c6842d1625ceb3!2sA%20ma%20maniere!5e0!3m2!1sja!2sjp!4v1789877847101!5m2!1sja!2sjp',
 } as const;
