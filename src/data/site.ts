@@ -12,8 +12,8 @@ export const siteConfig = {
   closedDay: '月曜定休',
   latitude: 36.1822492809315,
   longitude: 140.06461657776634,
-  // TODO: 正式なGoogleフォームのURLが決まり次第、差し替える
-  googleFormUrl: 'https://forms.gle/PLACEHOLDER',
+  googleFormUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLSc26d9YkjNfIz9arGCNM6FXYkQraTSKRYPUr0N5aORvQatQZA/viewform?usp=header',
   facebookUrl: 'https://www.facebook.com/AmamaniereT/',
   lineUrl: 'https://lin.ee/9FP7AwS',
   googleMapEmbedSrc:

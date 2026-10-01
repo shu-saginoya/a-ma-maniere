@@ -1,8 +1,14 @@
 # A ma maniere Webサイト
 
-洋服のお直し・お仕立てを行う「A ma maniere」の公式サイトです。Astro + TypeScript + Tailwind CSS による静的サイトとして構築し、Cloudflare Pages で配信します。
+洋服のお直し・お仕立てを行う「A ma maniere」の公式サイトです。
 
-詳細な仕様は [docs/SPEC.md](./docs/SPEC.md)、作業計画は [docs/PLAN.md](./docs/PLAN.md) を参照してください。
+## 利用技術
+
+静的サイトとして構築し、Cloudflare Pagesで配信。
+
+- Astro
+- TypeScript
+- Tailwind CSS
 
 ## プロジェクト構成
 
@@ -13,7 +19,6 @@
 │   ├── layouts/       共通レイアウト
 │   ├── pages/         ルーティング対象のページ
 │   └── styles/        グローバルスタイル（Tailwind）
-├── docs/              仕様書・作業計画書
 └── astro.config.mjs
 ```
 
@@ -34,4 +39,4 @@ GitHubリポジトリへのpushをトリガーに、Cloudflare Pagesが自動ビ
 
 - ビルドコマンド: `pnpm build`
 - 出力ディレクトリ: `dist`
-- 本番ドメイン: `a-ma-maniere.jp`（DNS移行完了後に接続）
+- 本番ドメイン: `a-ma-maniere.jp`
