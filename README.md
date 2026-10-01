@@ -8,7 +8,7 @@
 
 - Astro
 - TypeScript
-- Tailwind CSS によるします。
+- Tailwind CSS
 
 ## プロジェクト構成
 
