@@ -19,7 +19,6 @@
 │   ├── layouts/       共通レイアウト
 │   ├── pages/         ルーティング対象のページ
 │   └── styles/        グローバルスタイル（Tailwind）
-├── docs/              仕様書など
 └── astro.config.mjs
 ```
 
